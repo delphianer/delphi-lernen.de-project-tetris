@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="13">
+      <Unit0>
+        <Filename Value="Tetris.dpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="14"/>
+        <CursorPos X="3" Y="13"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="MainUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="239"/>
+        <CursorPos X="3" Y="97"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="mGame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Game"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="119"/>
+        <CursorPos X="19" Y="126"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="fSplashScreen.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="147"/>
+        <CursorPos X="24" Y="156"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="fOptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="750"/>
+        <CursorPos X="18" Y="759"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="uHighscore.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="238"/>
+        <CursorPos X="37" Y="243"/>
+        <UsageCount Value="21"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uPlaySound.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="146"/>
+        <CursorPos X="6" Y="146"/>
+        <UsageCount Value="21"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus\fpc\3.2.0\source\packages\winunits-base\src\urlmon.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1049"/>
+        <CursorPos X="172" Y="1058"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\fpc\3.2.0\source\rtl\win\wininc\base.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="6" Y="102"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\fpc\3.2.0\source\rtl\inc\systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="469"/>
+        <CursorPos X="3" Y="477"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="3934"/>
+        <CursorPos Y="3945"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="164"/>
+        <CursorPos X="18" Y="168"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\lcl\lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="134"/>
+        <CursorPos Y="142"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="344" Column="16" TopLine="341"/>
+      </Position1>
+      <Position2>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="347" Column="8" TopLine="341"/>
+      </Position2>
+      <Position3>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="348" Column="8" TopLine="341"/>
+      </Position3>
+      <Position4>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="349" Column="8" TopLine="341"/>
+      </Position4>
+      <Position5>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="350" Column="8" TopLine="341"/>
+      </Position5>
+      <Position6>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="351" Column="8" TopLine="341"/>
+      </Position6>
+      <Position7>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="352" Column="8" TopLine="341"/>
+      </Position7>
+      <Position8>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="353" Column="8" TopLine="341"/>
+      </Position8>
+      <Position9>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="354" Column="21" TopLine="341"/>
+      </Position9>
+      <Position10>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="355" Column="41" TopLine="341"/>
+      </Position10>
+      <Position11>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="356" Column="36" TopLine="342"/>
+      </Position11>
+      <Position12>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="363" Column="85" TopLine="349"/>
+      </Position12>
+      <Position13>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="376" Column="55" TopLine="362"/>
+      </Position13>
+      <Position14>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="377" Column="58" TopLine="364"/>
+      </Position14>
+      <Position15>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="423" Column="44" TopLine="410"/>
+      </Position15>
+      <Position16>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="424" Column="37" TopLine="411"/>
+      </Position16>
+      <Position17>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="447" Column="66" TopLine="433"/>
+      </Position17>
+      <Position18>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="448" Column="67" TopLine="434"/>
+      </Position18>
+      <Position19>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="478" Column="42" TopLine="465"/>
+      </Position19>
+      <Position20>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="479" Column="52" TopLine="466"/>
+      </Position20>
+      <Position21>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="790" Column="33" TopLine="776"/>
+      </Position21>
+      <Position22>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="869" Column="33" TopLine="855"/>
+      </Position22>
+      <Position23>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="878" Column="73" TopLine="875"/>
+      </Position23>
+      <Position24>
+        <Filename Value="MainUnit.pas"/>
+        <Caret Line="117" Column="83" TopLine="106"/>
+      </Position24>
+      <Position25>
+        <Filename Value="fOptions.pas"/>
+        <Caret Line="759" Column="18" TopLine="750"/>
+      </Position25>
+      <Position26>
+        <Filename Value="mGame.pas"/>
+        <Caret Line="129" Column="15" TopLine="123"/>
+      </Position26>
+      <Position27>
+        <Filename Value="mGame.pas"/>
+        <Caret Line="658" Column="3" TopLine="726"/>
+      </Position27>
+      <Position28>
+        <Filename Value="mGame.pas"/>
+        <Caret Line="575" Column="10" TopLine="566"/>
+      </Position28>
+      <Position29>
+        <Filename Value="fSplashScreen.pas"/>
+        <Caret Line="83" Column="26" TopLine="25"/>
+      </Position29>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="10">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="68"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="75"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="82"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="89"/>
+      </Item4>
+      <Item5>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="97"/>
+      </Item5>
+      <Item6>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="104"/>
+      </Item6>
+      <Item7>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="111"/>
+      </Item7>
+      <Item8>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="118"/>
+      </Item8>
+      <Item9>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="133"/>
+      </Item9>
+      <Item10>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <Line Value="221"/>
+      </Item10>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

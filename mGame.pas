@@ -12,10 +12,19 @@
 }
 unit mGame;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  SysUtils, Classes, ExtCtrls,  Windows, ImgList, Controls, Graphics;
+{$IFnDEF FPC}
+  Windows,
+{$ELSE}
+  LCLIntf, LCLType, LMessages,
+{$ENDIF}
+  SysUtils, Classes, ExtCtrls, ImgList, Controls, Graphics;
 
 const
   SIDELENGTH=30;
@@ -141,8 +150,12 @@ var
 implementation
 
 uses
-  Math, Types, Forms, MainUnit, Dialogs, uHighscore, 
-  DateUtils, jpeg, fOptions, uPlaySound;
+{$IFnDEF FPC}
+  jpeg,
+{$ELSE}
+{$ENDIF}
+  Math, Types, Forms, MainUnit, Dialogs, uHighscore,
+  DateUtils, fOptions, uPlaySound;
 
 {$R *.dfm}
 
@@ -459,7 +472,7 @@ procedure TGame.AddBottomRow;
 var
   x, y:Integer;
 begin
-  // alles eins höher
+  // alles eins hÃ¶her
   if fThisObject.PosZero.Y>0 then
   begin
     fThisObject.PosZero.Y:=fThisObject.PosZero.Y-1;
@@ -474,7 +487,7 @@ begin
       fPlayground[x,y-1].TemplateNum:=fPlayground[x,y].TemplateNum;  
       fPlayground[x,y-1].RePaint:=fPlayground[x,y].RePaint;
     end;
-  // Reihe unten einfügen
+  // Reihe unten einfÃ¼gen
   for x := 0 to High(fPlayground) do
   begin
     if random(100) mod 2 = 0 then
@@ -739,7 +752,7 @@ begin
       fPlayground[x,y].RePaint:=true;
     end;
 
-  // für den Anfang:
+  // fÃ¼r den Anfang:
   fThisObject.Color:=fBackgroundColor;
 
   RepaintPreview;
@@ -1129,13 +1142,13 @@ begin
     for i := 1 to 4 do
       for k := 1 to 4 do
         ThisObjectCopyCopy[k][i]:=ThisObjectCopy[i][5-k];
-    // ThisObjectCopyCopy enthält die Info, wie das Objekt positionoiert ist,
+    // ThisObjectCopyCopy enthÃ¤lt die Info, wie das Objekt positionoiert ist,
     // wenn es gedreht wurde.
 
-    // wenn erste Zeile "leer" ist, dann löschen:
+    // wenn erste Zeile "leer" ist, dann lÃ¶schen:
     if hasFreeLine then
       killFirstLine;
-    if hasFreeLine then // kann bei Stab, Würfel und den Ls sein
+    if hasFreeLine then // kann bei Stab, WÃ¼rfel und den Ls sein
       killFirstLine;
     if hasFreeLine then // kann nur beim Stab sein
       killFirstLine;
@@ -1166,7 +1179,7 @@ begin
           if fPlayground[Pos[i].X][Pos[i].Y].isObject then
             result:=false;
 
-    // Gedrehte Daten übertragen
+    // Gedrehte Daten Ã¼bertragen
     if Result then
       for i := 1 to 4 do
       begin
@@ -1238,13 +1251,13 @@ begin
     for i := 1 to 4 do
       for k := 1 to 4 do
         ThisObjectCopyCopy[k][i]:=ThisObjectCopy[5-i][k];
-    // ThisObjectCopyCopy enthält die Info, wie das Objekt positionoiert ist,
+    // ThisObjectCopyCopy enthÃ¤lt die Info, wie das Objekt positionoiert ist,
     // wenn es gedreht wurde.
 
-    // wenn erste Zeile "leer" ist, dann löschen:
+    // wenn erste Zeile "leer" ist, dann lÃ¶schen:
     if hasFreeLine then
       killFirstLine;
-    if hasFreeLine then // kann bei Stab, Würfel und den Ls sein
+    if hasFreeLine then // kann bei Stab, WÃ¼rfel und den Ls sein
       killFirstLine;
     if hasFreeLine then // kann nur beim Stab sein
       killFirstLine;     
@@ -1275,7 +1288,7 @@ begin
           if fPlayground[Pos[i].X][Pos[i].Y].isObject then
             result:=false;
 
-    // Gedrehte Daten Übertragen
+    // Gedrehte Daten Ãœbertragen
     if Result then
       for i := 1 to 4 do
       begin

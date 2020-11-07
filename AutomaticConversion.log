@@ -1,0 +1,32 @@
+Tetris.lpi Note: Added defines -dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL in custom options
+ Progress: Alle Unit-Dateien gefunden
+Tetris.dpr(1,16) Note: Added MODE Delphi syntax modifier after unit name.
+ : 
+ : *** Wandle zum Projekt/Package gehörende Unit-Dateien um ***
+MainUnit.pas Note: Kodierung von cp1252 zu UTF-8 geändert
+MainUnit.pas Note: Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+MainUnit.pas(13,15) Note: Added MODE Delphi syntax modifier after unit name.
+mGame.pas Note: Kodierung von cp1252 zu UTF-8 geändert
+mGame.pas Note: Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+mGame.pas Note: Unit "jpeg" aus dem uses-Abschnitt entfernt.
+mGame.pas(13,12) Note: Added MODE Delphi syntax modifier after unit name.
+fSplashScreen.pas Note: Kodierung von cp1252 zu UTF-8 geändert
+fSplashScreen.pas Note: Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+fSplashScreen.pas Note: Unit "ShellAPI" aus dem uses-Abschnitt entfernt.
+fSplashScreen.pas(13,20) Note: Added MODE Delphi syntax modifier after unit name.
+fSplashScreen.pas(248,3) Note: Aufruf ShellExecute(0,'OPEN','http://delphi-lernen.de/tetris','','',SW_SHOWNORMAL); mit OpenURL('http://delphi-lernen.de/tetris'); { *Konvertiert von ShellExecute* } ersetzt
+fOptions.pas Note: Kodierung von cp1252 zu UTF-8 geändert
+fOptions.pas(207,45) Note: Zeichenschreibweise von Unit "uHighScore" auf "uHighscore" korrigiert.
+fOptions.pas Note: Unit "jpeg" aus dem uses-Abschnitt entfernt.
+fOptions.pas Note: Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+fOptions.pas Note: Unit "ShellAPI" aus dem uses-Abschnitt entfernt.
+fOptions.pas(13,15) Note: Added MODE Delphi syntax modifier after unit name.
+fOptions.pas(739,3) Note: Aufruf ShellExecute(Application.Handle,                 'OPEN',                 PChar(Application.exename),                 '', '', SW_NORMAL); mit  OpenDocument(PChar(Application.exename)); { *Konvertiert von ShellExecute* } ersetzt
+fOptions.pas(714,9) Note: Aufruf ShellExecute(0,'open','http://delphi-lernen.de/tetris','','',SW_MAXIMIZE); mit OpenURL('http://delphi-lernen.de/tetris'); { *Konvertiert von ShellExecute* } ersetzt
+fOptions.pas(305,3) Note: Aufruf ShellExecute(0,'open','http://delphi-lernen.de/tetris','','',SW_MAXIMIZE); mit OpenURL('http://delphi-lernen.de/tetris'); { *Konvertiert von ShellExecute* } ersetzt
+uHighscore.pas Note: Kodierung von cp1252 zu UTF-8 geändert
+uHighscore.pas Note: Unit "Windows" mit "LCLIntf, LCLType, LMessages" im uses Abschnitt ersetzt.
+uHighscore.pas(13,17) Note: Added MODE Delphi syntax modifier after unit name.
+uPlaySound.pas(13,17) Note: Added MODE Delphi syntax modifier after unit name.
+ Progress: Konvertierung benötigte: 00:01:26
+ : Umwandlung ist fertig.

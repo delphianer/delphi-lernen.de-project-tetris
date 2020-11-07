@@ -12,10 +12,19 @@
 }
 unit uHighscore;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  Windows, ExtCtrls, SysUtils, Classes, DateUtils, Graphics, Forms;
+{$IFnDEF FPC}
+  Windows,
+{$ELSE}
+  LCLIntf, LCLType, LMessages,
+{$ENDIF}
+  ExtCtrls, SysUtils, Classes, DateUtils, Graphics, Forms;
 
 type
   RHighscore = record
@@ -98,7 +107,7 @@ begin
   end
   else
   begin
-    // Default-Werte für die Highscores:
+    // Default-Werte fÃ¼r die Highscores:
     fLocalHighScore[0].name:='Anna';
     fLocalHighScore[1].name:='Benedigt';
     fLocalHighScore[2].name:='Christina';
@@ -116,7 +125,7 @@ begin
     fLocalHighScore[14].name:='Olga';
     fLocalHighScore[15].name:='Paul';
     fLocalHighScore[16].name:='Quendoline';
-    fLocalHighScore[17].name:='Rüdiger';
+    fLocalHighScore[17].name:='RÃ¼diger';
     fLocalHighScore[18].name:='Stefanie';
     fLocalHighScore[19].name:='Tim';
     fLocalHighScore[0].Points:=100000;
@@ -231,12 +240,16 @@ var
   var
     Len: DWORD;
   begin
+    result := 'not implemented yet';
+    // todo: Ersatz finden
+    {
     Len:=MAX_COMPUTERNAME_LENGTH+1;
     SetLength(Result,Len);
     if Windows.GetComputerName(PChar(Result), Len) then
       SetLength(Result,Len)
     else
       RaiseLastOSError;
+    }
   end;
           
 label tryagain;
@@ -244,7 +257,7 @@ begin
   result:=false;
   if fLocalHighScore[19].Points<fScore then
   begin
-    Application.MessageBox(PChar('Herzlichen Glückwunsch!'+#13
+    Application.MessageBox(PChar('Herzlichen GlÃ¼ckwunsch!'+#13
            +'Du hast den Highscore geknackt!'),'New Highscore!',MB_OK);
     tryagain:
     s:=InputBox('Game::Over!','Du hast '+IntToStr(fScore)+' Punkte!'+#13+'Dein Name:',s);
@@ -368,7 +381,7 @@ begin
     Brush.Color:=Game.BackgroundColor;
     Pen.Color:=Game.GridColor;
     font.Color:=invertcolor(Game.BackgroundColor);
-    TextOut(5,5,Format('%-10s   %8s  %-6s %-6s %-5s  %-5s     %-17s',['  Name','Punkte','Reihen','Größe','Level','Dauer','Datum     Uhrzeit']));
+    TextOut(5,5,Format('%-10s   %8s  %-6s %-6s %-5s  %-5s     %-17s',['  Name','Punkte','Reihen','GrÃ¶ÃŸe','Level','Dauer','Datum     Uhrzeit']));
     for i := 0 to 19 do
       TextOut(5,25*i+40,Format('%2d %-10s %7d   %4d  %4d  %4d   %-8s  %-9s',
                                       [i+1,

@@ -12,10 +12,19 @@
 }
 unit fSplashScreen;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+{$IFnDEF FPC}
+  Windows,
+{$ELSE}
+  LCLIntf, LCLType, LMessages,
+{$ENDIF}
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons;
 
 type
@@ -49,7 +58,12 @@ var
 
 implementation
 
-uses MainUnit, fOptions, mGame, ShellAPI;
+uses
+{$IFnDEF FPC}
+  ShellAPI,
+{$ELSE}
+{$ENDIF}
+  MainUnit, fOptions, mGame;
 
 {$R *.dfm}
           
@@ -64,8 +78,9 @@ begin
     if ParamStr(1)='-config' then
 
   Randomize;
-  TransparentColor:=true;
-  TransparentColorValue:=clBlue;
+  // todo: Ersatz finden
+  //TransparentColor:=true;
+  //TransparentColorValue:=clBlue;
   LblVersion.Caption:=APP_VERSIONSTR;
   LblVersion.Left:=clientwidth-LblVersion.Width-53
 end;  
@@ -99,7 +114,7 @@ begin
         w:=PG_SWIDTH*SIDELENGTH;
         h:=PG_SHEIGHT*SIDELENGTH;
         if Screen.Width<w then
-          Application.MessageBox('Die Auflösung ist zu klein, um ordnungsgemäß dargestellt werden zu können!',
+          Application.MessageBox('Die AuflÃ¶sung ist zu klein, um ordnungsgemÃ¤ÃŸ dargestellt werden zu kÃ¶nnen!',
                                  'Fehler!',MB_OK+MB_ICONERROR);
       end;
     PG_MEDIUM:
@@ -138,7 +153,9 @@ begin
   begin
     Game.Init(FrmOptions.CbSize.ItemIndex+1,
       ImgBildFlaeche, ImgPreview,
-      FrmOptions.ColorBoxBgCol.Selected,FrmOptions.ColorBoxGrid.Selected);
+      clWhite, clSilver
+      //FrmOptions.ColorBoxBgCol.Selected,FrmOptions.ColorBoxGrid.Selected
+      );
     ImgBildFlaeche.Canvas.Brush.Color:=Game.BackgroundColor;
     MainForm.Color:=Game.BackgroundColor;
     Mainform.Font.Color := invertcolor(Game.BackgroundColor);
@@ -245,7 +262,7 @@ end;
 
 procedure TFrmSplashScreen.Label3Click(Sender: TObject);
 begin
-  ShellExecute(0,'OPEN','http://delphi-lernen.de/tetris','','',SW_SHOWNORMAL);
+  OpenURL('http://delphi-lernen.de/tetris'); { *Konvertiert von ShellExecute* }
 end;
 
 

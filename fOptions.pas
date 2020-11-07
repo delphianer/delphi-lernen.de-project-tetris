@@ -12,12 +12,20 @@
 }
 unit fOptions;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, ComCtrls, XPMan, Buttons, MPlayer, ImgList, 
-  jpeg;
+{$IFnDEF FPC}
+  jpeg, Windows,
+{$ELSE}
+  LCLIntf, LCLType, LMessages,
+{$ENDIF}
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, ComCtrls, Buttons, {MPlayer,} ImgList;
 
 type
   TKeyCodeType = Array[0..74] of Word;
@@ -56,7 +64,6 @@ type
     CmbMoveOneDown: TComboBox;
     CmbMoveDown: TComboBox;
     CmbPause: TComboBox;
-    XPManifest1: TXPManifest;
     lblLevel: TLabel;
     UdLevelSelected: TUpDown;
     Label8: TLabel;
@@ -99,7 +106,8 @@ type
     BitBtnOpenOver: TBitBtn;
     BitBtnNoLoop: TBitBtn;
     BitBtnOpenLoop: TBitBtn;
-    MediaPlayer: TMediaPlayer;
+    // todo: MediaPlayer Ersatz finden
+    //MediaPlayer: TMediaPlayer;
     Label5: TLabel;
     EdSoundError: TEdit;
     BitBtnPlayError: TBitBtn;
@@ -111,17 +119,19 @@ type
     TabSheet8: TTabSheet;
     TabSheet9: TTabSheet;
     Label10: TLabel;
-    ColorBoxGrid: TColorBox;
-    ColorBoxBgCol: TColorBox;
+    // todo: Ersatz finden
+    //ColorBoxGrid: TColorBox;
+    //ColorBoxBgCol: TColorBox;
     Label9: TLabel;
-    GroupBox1: TGroupBox;
-    ColorBox1: TColorBox;
-    ColorBox2: TColorBox;
-    ColorBox3: TColorBox;
-    ColorBox4: TColorBox;
-    ColorBox5: TColorBox;
-    ColorBox6: TColorBox;
-    ColorBox7: TColorBox;
+    // todo: Ersatz finden
+    //GroupBox1: TGroupBox;
+    //ColorBox1: TColorBox;
+    //ColorBox2: TColorBox;
+    //ColorBox3: TColorBox;
+    //ColorBox4: TColorBox;
+    //ColorBox5: TColorBox;
+    //ColorBox6: TColorBox;
+    //ColorBox7: TColorBox;
     Button4: TButton;
     RbOldStyle: TRadioButton;
     RadioButton2: TRadioButton;
@@ -204,7 +214,11 @@ var
 implementation
 
 uses
-  mGame, MainUnit, fSplashScreen, IniFiles, uHighScore, ShellAPI,
+{$IFnDEF FPC}
+  ShellAPI,
+{$ELSE}
+{$ENDIF}
+  mGame, MainUnit, fSplashScreen, IniFiles, uHighscore,
   mmsystem, uPlaySound, UrlMon;
 
 {$R *.dfm}
@@ -219,7 +233,7 @@ var
   i:Integer;  
 begin
   fKeyCodes[0]:=8;
-  fKeyNames[0]:='Rücktaste';
+  fKeyNames[0]:='RÃ¼cktaste';
   fKeyCodes[1]:=13;
   fKeyNames[1]:='Enter';
   fKeyCodes[2]:=16;
@@ -270,7 +284,7 @@ begin
     fKeyNames[53+i]:='F'+IntToStr(i);
   end;
   fKeyCodes[66]:=186;
-  fKeyNames[66]:='Ü';
+  fKeyNames[66]:='Ãœ';
   fKeyCodes[67]:=187;
   fKeyNames[67]:='+';
   fKeyCodes[68]:=188;
@@ -282,11 +296,11 @@ begin
   fKeyCodes[71]:=191;
   fKeyNames[71]:='#';
   fKeyCodes[72]:=192;
-  fKeyNames[72]:='Ö';
+  fKeyNames[72]:='Ã–';
   fKeyCodes[73]:=220;
   fKeyNames[73]:='Circumflex';
   fKeyCodes[74]:=222;
-  fKeyNames[74]:='Ä';
+  fKeyNames[74]:='Ã„';
 
   CmBMoveLeft.Clear;
   for i := 0 to High(fKeyNames) do
@@ -302,7 +316,7 @@ end;
 
 procedure TFrmOptions.lblURLClick(Sender: TObject);
 begin
-  ShellExecute(0,'open','http://delphi-lernen.de/tetris','','',SW_MAXIMIZE);
+  OpenURL('http://delphi-lernen.de/tetris'); { *Konvertiert von ShellExecute* }
 end;
 
 procedure TFrmOptions.lblURLMouseEnter(Sender: TObject);
@@ -330,11 +344,16 @@ var
   Colors:TColorArray;
   i: Integer;
 begin
-  for i := 0 to 6 do
-    Colors[i]:=TColorBox(FindComponent('ColorBox'+IntToStr(i+1))).Selected;
+  Colors[0] := clRed;
+  Colors[1] := clGreen;
+  Colors[2] := clBlue;
+  Colors[3] := clLime;
+  Colors[4] := clYellow;
+  Colors[5] := clNavy;
+  Colors[6] := clPurple;
   Game.Colors:=Colors;
-  Game.BackgroundColor:=ColorBoxBgCol.Selected;
-  Game.GridColor:=ColorBoxGrid.Selected;
+  Game.BackgroundColor:=clWhite; //ColorBoxBgCol.Selected;
+  Game.GridColor:=clSilver; //ColorBoxGrid.Selected;
 end;
 
 
@@ -353,8 +372,9 @@ begin
       WriteInteger('MAIN','Level',UdLevelSelected.Position); 
       WriteBool('MAIN','SaveEndScreen',CbSaveEndScreen.Checked);
 
-      WriteInteger('MAIN','BgColor',ColorBoxBgCol.Selected);
-      WriteInteger('MAIN','GridColor',ColorBoxGrid.Selected);
+      // todo: Ersatz finden
+      WriteInteger('MAIN','BgColor',clWhite); // ColorBoxBgCol.Selected);
+      WriteInteger('MAIN','GridColor',clSilver); // ColorBoxGrid.Selected);
       
       if CmBMoveLeft.Text='' then     // "Installation"
       begin
@@ -397,9 +417,12 @@ begin
 
       WriteString('MAIN','VInfo',APP_VERSIONSTR);
 
+      // todo: Ersatz finden
+      {
       for i := 0 to 6 do
         with TColorBox(FindComponent('ColorBox'+IntToStr(i+1))) do
           WriteInteger('MAIN','Color'+IntToStr(i),Selected);
+          }
     end;
   finally
     FreeAndNil(IniFile);
@@ -420,8 +443,9 @@ begin
     UdLevelSelected.Position:=IniFile.ReadInteger('MAIN','Level',0);
     CbSaveEndScreen.Checked:=IniFile.ReadBool('MAIN','SaveEndScreen',false);
 
-    ColorBoxBgCol.Selected:=IniFile.ReadInteger('MAIN','BgColor',clWhite);
-    ColorBoxGrid.Selected:=IniFile.ReadInteger('MAIN','GridColor',clSilver);
+    // todo: Ersatz finden
+    //ColorBoxBgCol.Selected:=IniFile.ReadInteger('MAIN','BgColor',clWhite);
+    //ColorBoxGrid.Selected:=IniFile.ReadInteger('MAIN','GridColor',clSilver);
 
     CmBMoveLeft.ItemIndex:=IniFile.ReadInteger('MAIN','MoveLeft',12);
     CmbMoveRight.ItemIndex:=IniFile.ReadInteger('MAIN','MoveRight',14);
@@ -447,9 +471,13 @@ begin
     EdSoundError.Text:=ExtractFileName(Sounds.Error);
 
     LblLevel.Caption:= 'Level: '+IntToStr(UdLevelSelected.Position);
+
+    // todo: Ersatz finden
+    {
     for i := 0 to 6 do
       with TColorBox(FindComponent('ColorBox'+IntToStr(i+1))) do
         Selected:=IniFile.ReadInteger('MAIN','Color'+IntToStr(i),Selected);
+        }
   finally
     FreeAndNil(IniFile);
   end;
@@ -688,10 +716,11 @@ var
   Descr: TStringList;
   s: String;
   i: Integer;
+  NO_ERROR : HResult;
 begin
   FileName := ExtractFilePath(ParamStr(0))+'update.tmp';
   res := URLDownloadToFile(nil,'http://delphi-lernen.de/downloads/update/tetris.ini',PChar(FileName),0,nil);
-  
+  NO_ERROR := 0;
   if res = NO_ERROR then
   begin
     ini := TIniFile.Create(FileName);
@@ -703,7 +732,7 @@ begin
       Descr := TStringList.Create;
 
       ini.ReadSection('Description',Descr);
-      s:='Eine neue Version ist verfügbar!'+#13+#13+'Beschreibung:'+#13;
+      s:='Eine neue Version ist verfÃ¼gbar!'+#13+#13+'Beschreibung:'+#13;
       s:=s + #13 + 'Version:' + Ini.ReadString('Main','VersionStr','');
       for i := 0 to Descr.Count - 1 do
         s:=s + #13 + Ini.ReadString('Description',Descr.Strings[i],'');
@@ -711,7 +740,7 @@ begin
 
       if Application.MessageBox(PChar(s),'Versionsinformation',
                        MB_YESNO + MB_ICONINFORMATION)= ID_YES then
-        ShellExecute(0,'open','http://delphi-lernen.de/tetris','','',SW_MAXIMIZE);
+        OpenURL('http://delphi-lernen.de/tetris'); { *Konvertiert von ShellExecute* }
 
       Descr.Free;
     end;    
@@ -719,7 +748,7 @@ begin
     ini.Free;
   end
   else
-    Application.MessageBox('Momentan kann nicht auf Update überprüft werden!','Fehler!',MB_OK+MB_ICONERROR);   
+    Application.MessageBox('Momentan kann nicht auf Update Ã¼berprÃ¼ft werden!','Fehler!',MB_OK+MB_ICONERROR);   
 end;
 
 
@@ -736,10 +765,7 @@ end;
 
 procedure TFrmOptions.Button2Click(Sender: TObject);
 begin
-  ShellExecute(Application.Handle,
-                 'OPEN',
-                 PChar(Application.exename),
-                 '', '', SW_NORMAL);
+   OpenDocument(PChar(Application.exename)); { *Konvertiert von ShellExecute* }
   FrmSplashScreen.Close;
 end;
 
@@ -846,9 +872,12 @@ procedure TFrmOptions.ColorBoxBgColChange(Sender: TObject);
 var
   i:Integer;
 begin
+  // todo: Ersatz finden
+  {
   for i := 1 to 7 do
     if TColorBox(FindComponent('ColorBox'+IntToStr(i))).Selected = ColorBoxBgCol.Selected then
       ColorBoxBgCol.Selected:=clWhite;
+  }
 end;
 
 
@@ -858,7 +887,8 @@ procedure TFrmOptions.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   BtnCancel.Click;
   Action:=caNone;
-  player:=nil;
+  // todo: Ersatz finden
+  //player:=nil;
 end;
 
 
@@ -884,7 +914,8 @@ begin
   InitKeyArrays;
   BtnCancel.Click;
   lblVersion.Caption:=APP_VERSIONSTR;
-  player:=MediaPlayer;
+  // todo: Ersatz finden
+  //player:=MediaPlayer;
 end;
 
 

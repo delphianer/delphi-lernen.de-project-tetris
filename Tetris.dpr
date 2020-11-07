@@ -1,6 +1,14 @@
 program Tetris;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 uses
+{$IFnDEF FPC}
+{$ELSE}
+  Interfaces,
+{$ENDIF}
   Forms,
   MainUnit in 'MainUnit.pas' {MainForm},
   mGame in 'mGame.pas' {Game: TDataModule},

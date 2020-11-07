@@ -12,10 +12,19 @@
 }
 unit MainUnit;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+{$IFnDEF FPC}
+  Windows,
+{$ELSE}
+  LCLIntf, LCLType, LMessages,
+{$ENDIF}
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, StdCtrls, Grids, Buttons;
 
   //{$DEFINE DEBUGMODE}
@@ -34,7 +43,7 @@ const
 
 0.9.1.1:
 - Splashscreen bei Linux nichtmehr lila sondern Silber
-- beim übernehmen der Optionen wird das Hauptfenster zentriert.
+- beim Ã¼bernehmen der Optionen wird das Hauptfenster zentriert.
 
 0.9.5.0:
 - Sounds konfigurierbar
@@ -49,13 +58,13 @@ const
 - Optionen->Grafik generell verbessert
 
 0.9.9.0
-- RePaint vollständig implementiert
+- RePaint vollstÃ¤ndig implementiert
 
 1.0.0.0
 - Update implementiert
-- Standardmäßig Sounds deaktiviert
+- StandardmÃ¤ÃŸig Sounds deaktiviert
 
-16.09.2007 V1.0.0.0 veröffentlicht!
+16.09.2007 V1.0.0.0 verÃ¶ffentlicht!
  }
 type
   TMainForm = class(TForm)

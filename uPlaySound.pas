@@ -12,10 +12,14 @@
 }
 unit uPlaySound;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
-uses
-  Mplayer;
+//uses
+//  Mplayer;
 
 var
   Sounds : record
@@ -27,7 +31,7 @@ var
     Loop,
     Error:String;
   end;
-  player : TMediaPlayer;
+  //player : TMediaPlayer;
   noSounds : Boolean = true;
                   
 Procedure SndDown;
@@ -47,6 +51,8 @@ uses
 
 procedure closeFirst;
 begin
+  // todo: Ersatz finden
+  {
   Case player.Mode of
    mpNotReady,
    mpStopped,
@@ -55,7 +61,7 @@ begin
    mpSeeking,
    mpPaused,
    mpOpen: player.Close;
-  end;
+  end; }
 end;
 
 
@@ -64,9 +70,11 @@ begin
   if FileExists(Sounds.Down) and not noSounds then
   begin
     closeFirst;
+    {
     player.FileName:=Sounds.Down;
     player.Open;
     player.Play;
+    }
   end;
 end;
 
@@ -75,9 +83,11 @@ begin
   if FileExists(Sounds.Drop) and not noSounds then
   begin
     closeFirst;
+    {
     player.FileName:=Sounds.Drop;
     player.Open;  
     player.Play;
+    }
   end;
 end;
 
@@ -86,9 +96,11 @@ begin
   if FileExists(Sounds.Move) and not noSounds then
   begin
     closeFirst;
+    {
     player.FileName:=Sounds.Move;
     player.Open;  
     player.Play;
+    }
   end;
 end;
 
@@ -97,9 +109,12 @@ begin
   if FileExists(Sounds.Turn) and not noSounds then
   begin
     closeFirst;
+    // todo: Ersatz finden
+    {
     player.FileName:=Sounds.Turn;
     player.Open; 
     player.Play;
+    }
   end;
 end;
 
@@ -108,9 +123,12 @@ begin
   if FileExists(Sounds.GameOver) and not noSounds then
   begin
     closeFirst;
+    // todo: Ersatz finden
+    {
     player.FileName:=Sounds.GameOver;
     player.Open;
     player.Play;
+    }
   end;
 end;
 
@@ -120,9 +138,12 @@ begin
   if FileExists(Sounds.Error) and not noSounds  then
   begin
     closeFirst;
+    // todo: Ersatz finden
+    {
     player.FileName:=Sounds.Error;
     player.Open;
     player.Play;
+    }
   end;
 end;
 
