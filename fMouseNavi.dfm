@@ -1,0 +1,107 @@
+object frmMouseNavi: TfrmMouseNavi
+  Left = 11
+  Top = 379
+  AlphaBlend = True
+  AlphaBlendValue = 175
+  BorderStyle = bsNone
+  Caption = 'frmMouseNavi'
+  ClientHeight = 122
+  ClientWidth = 149
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poDesigned
+  OnMouseDown = FormMouseDown
+  OnMouseMove = FormMouseMove
+  OnMouseUp = FormMouseUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton1: TSpeedButton
+    Left = 8
+    Top = 36
+    Width = 41
+    Height = 22
+    Caption = '<'
+    Flat = True
+    OnClick = SpeedButton1Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 102
+    Top = 36
+    Width = 41
+    Height = 22
+    Caption = '>'
+    Flat = True
+    OnClick = SpeedButton2Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 32
+    Top = 8
+    Width = 41
+    Height = 22
+    Caption = 'tl'
+    Flat = True
+    OnClick = SpeedButton3Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object SpeedButton4: TSpeedButton
+    Left = 79
+    Top = 8
+    Width = 41
+    Height = 22
+    Caption = 'tr'
+    Flat = True
+    OnClick = SpeedButton4Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object SpeedButton5: TSpeedButton
+    Left = 55
+    Top = 36
+    Width = 41
+    Height = 22
+    Caption = 'p'
+    Flat = True
+    OnClick = SpeedButton5Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object SpeedButton6: TSpeedButton
+    Left = 55
+    Top = 64
+    Width = 41
+    Height = 22
+    Caption = '1'
+    Flat = True
+    OnClick = SpeedButton6Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object SpeedButton7: TSpeedButton
+    Left = 55
+    Top = 92
+    Width = 41
+    Height = 22
+    Caption = 'inf'
+    Flat = True
+    OnClick = SpeedButton7Click
+    OnMouseEnter = SpeedButton1MouseEnter
+    OnMouseLeave = SpeedButton1MouseLeave
+  end
+  object Timer1: TTimer
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 8
+    Top = 68
+  end
+end
