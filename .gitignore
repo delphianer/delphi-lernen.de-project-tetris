@@ -1,0 +1,12 @@
+*.dcu
+*.dsk
+*.exe
+fSplashScreen.dcu
+mGame.dcu
+Tetris.exe
+Tetris.identcache
+uHighscore.dcu
+uPlaySound.dcu
+/__history
+Tetris.dsk
+Tetris.identcache

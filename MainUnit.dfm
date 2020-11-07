@@ -50,6 +50,7 @@ object MainForm: TMainForm
     Align = alLeft
     ParentColor = True
     TabOrder = 0
+    ExplicitLeft = -6
     object ImgPreview: TImage
       Left = 11
       Top = 136
