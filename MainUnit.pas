@@ -22,7 +22,7 @@ uses
 
 const
   APP_VERSIONNUM=1000;
-  APP_VERSIONSTR='V1.0.0.0';
+  APP_VERSIONSTR='V1.0.1';
   APP_NAME = 'Tetris!';
 
 { detailierter Changelog:
@@ -56,6 +56,12 @@ const
 - Standardmäßig Sounds deaktiviert
 
 16.09.2007 V1.0.0.0 veröffentlicht!
+
+04.09.2021 V1.0.1
+- Versionierung angepasst...
+- komplett compilierbar
+- auf Github unter GPL seit 07.11.2020, seit heute aber vollständig und incl. Lizenz!
+
  }
 type
   TMainForm = class(TForm)
