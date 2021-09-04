@@ -135,7 +135,6 @@ type
     ImgPreview: TImage;
     lblAutorName: TLabel;
     lblDate: TLabel;
-    BtnStartUpdate: TButton;
     CkbNoSounds: TCheckBox;
     procedure BtnSaveClick(Sender: TObject);
     procedure BtnCancelClick(Sender: TObject);
@@ -172,7 +171,6 @@ type
     procedure BitBtnPlayErrorClick(Sender: TObject);
     procedure CbSelectTemplateChange(Sender: TObject);
     procedure RadioButton2Click(Sender: TObject);
-    procedure BtnStartUpdateClick(Sender: TObject);
     procedure CkbNoSoundsClick(Sender: TObject);
   private
     { Private-Deklarationen }
@@ -676,51 +674,6 @@ begin
   Hide;
 end;
 
-
-//######################## Button1Click ########################################
-
-procedure TFrmOptions.BtnStartUpdateClick(Sender: TObject);
-var
-  res              : HRESULT;
-  FileName         : String;                                  // TODO: UPDATE!!
-  ini              : TIniFile;
-  VersionNumOnline : Integer;
-  Descr: TStringList;
-  s: String;
-  i: Integer;
-begin
-  FileName := ExtractFilePath(ParamStr(0))+'update.tmp';
-  res := URLDownloadToFile(nil,'http://delphi-lernen.de/downloads/update/tetris.ini',PChar(FileName),0,nil);
-  
-  if res = NO_ERROR then
-  begin
-    ini := TIniFile.Create(FileName);
-
-    VersionNumOnline := Ini.ReadInteger('MAIN','VersionNum',0);
-
-    if APP_VERSIONNUM < VersionNumOnline then
-    begin
-      Descr := TStringList.Create;
-
-      ini.ReadSection('Description',Descr);
-      s:='Eine neue Version ist verfügbar!'+#13+#13+'Beschreibung:'+#13;
-      s:=s + #13 + 'Version:' + Ini.ReadString('Main','VersionStr','');
-      for i := 0 to Descr.Count - 1 do
-        s:=s + #13 + Ini.ReadString('Description',Descr.Strings[i],'');
-      s:=s +#13+#13+ 'Wollen Sie zur ''Tetris!''-Website?'+#13;
-
-      if Application.MessageBox(PChar(s),'Versionsinformation',
-                       MB_YESNO + MB_ICONINFORMATION)= ID_YES then
-        ShellExecute(0,'open','http://delphi-lernen.de/tetris','','',SW_MAXIMIZE);
-
-      Descr.Free;
-    end;    
-
-    ini.Free;
-  end
-  else
-    Application.MessageBox('Momentan kann nicht auf Update überprüft werden!','Fehler!',MB_OK+MB_ICONERROR);   
-end;
 
 
 //######################## Button1Click ########################################

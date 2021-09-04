@@ -75,7 +75,6 @@ object FrmOptions: TFrmOptions
         Width = 117
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         ItemIndex = 1
         TabOrder = 0
         Text = 'Mittel (9x17)'
@@ -110,15 +109,6 @@ object FrmOptions: TFrmOptions
         Caption = 'Highscore anzeigen'
         TabOrder = 3
         OnClick = Button1Click
-      end
-      object BtnStartUpdate: TButton
-        Left = 93
-        Top = 168
-        Width = 141
-        Height = 25
-        Caption = 'Auf Update pr'#252'fen...'
-        TabOrder = 4
-        OnClick = BtnStartUpdateClick
       end
     end
     object TabSheet5: TTabSheet
@@ -185,7 +175,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 0
       end
       object CmbMoveRight: TComboBox
@@ -194,7 +183,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 1
       end
       object CmbTurnLeft: TComboBox
@@ -203,7 +191,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 2
       end
       object CmbTurnRight: TComboBox
@@ -212,7 +199,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 3
       end
       object CmbMoveOneDown: TComboBox
@@ -221,7 +207,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 4
       end
       object CmbMoveDown: TComboBox
@@ -230,7 +215,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 5
       end
       object CmbPause: TComboBox
@@ -239,7 +223,6 @@ object FrmOptions: TFrmOptions
         Width = 101
         Height = 23
         Style = csDropDownList
-        ItemHeight = 15
         TabOrder = 6
       end
     end
@@ -277,7 +260,6 @@ object FrmOptions: TFrmOptions
             Height = 22
             Selected = clSilver
             Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-            ItemHeight = 16
             TabOrder = 0
           end
           object ColorBoxBgCol: TColorBox
@@ -287,7 +269,6 @@ object FrmOptions: TFrmOptions
             Height = 22
             Selected = clWhite
             Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-            ItemHeight = 16
             TabOrder = 1
             OnChange = ColorBoxBgColChange
           end
@@ -328,7 +309,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clRed
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 0
             end
             object ColorBox2: TColorBox
@@ -338,7 +318,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clGreen
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 1
             end
             object ColorBox3: TColorBox
@@ -348,7 +327,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clBlue
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 2
             end
             object ColorBox4: TColorBox
@@ -358,7 +336,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clLime
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 3
             end
             object ColorBox5: TColorBox
@@ -368,7 +345,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clYellow
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 4
             end
             object ColorBox6: TColorBox
@@ -378,7 +354,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clNavy
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 5
             end
             object ColorBox7: TColorBox
@@ -388,7 +363,6 @@ object FrmOptions: TFrmOptions
               Height = 22
               Selected = clPurple
               Style = [cbStandardColors, cbExtendedColors, cbPrettyNames, cbCustomColors]
-              ItemHeight = 16
               TabOrder = 6
             end
             object Button4: TButton
@@ -458,7 +432,6 @@ object FrmOptions: TFrmOptions
             Width = 145
             Height = 23
             Style = csDropDownList
-            ItemHeight = 15
             TabOrder = 0
             OnChange = CbSelectTemplateChange
           end
@@ -532,8 +505,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 1
-        OnClick = BitBtnPlayDownClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -569,6 +540,8 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 1
+        OnClick = BitBtnPlayDownClick
       end
       object EdSoundDrop: TEdit
         Left = 94
@@ -585,8 +558,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 3
-        OnClick = BitBtnPlayDropClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -622,6 +593,8 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 3
+        OnClick = BitBtnPlayDropClick
       end
       object EdSoundMove: TEdit
         Left = 94
@@ -638,8 +611,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 5
-        OnClick = BitBtnPlayMoveClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -675,6 +646,8 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 5
+        OnClick = BitBtnPlayMoveClick
       end
       object EdSoundTurn: TEdit
         Left = 94
@@ -691,8 +664,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 7
-        OnClick = BitBtnPlayTurnClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -728,6 +699,8 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 7
+        OnClick = BitBtnPlayTurnClick
       end
       object EdSoundGameOver: TEdit
         Left = 94
@@ -744,8 +717,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 9
-        OnClick = BitBtnPlayOverClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -781,6 +752,8 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 9
+        OnClick = BitBtnPlayOverClick
       end
       object EdSoundLoop: TEdit
         Left = 94
@@ -797,8 +770,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 11
-        OnClick = BitBtnPlayLoopClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -834,15 +805,14 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 11
+        OnClick = BitBtnPlayLoopClick
       end
       object BitBtnNoDown: TBitBtn
         Left = 265
         Top = 11
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 12
-        OnClick = BitBtnNoDownClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -870,6 +840,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 12
+        OnClick = BitBtnNoDownClick
       end
       object BitBtnOpenDown: TBitBtn
         Left = 235
@@ -877,8 +850,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 13
-        OnClick = BitBtnOpenDownClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -906,15 +877,14 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 13
+        OnClick = BitBtnOpenDownClick
       end
       object BitBtnNoDrop: TBitBtn
         Left = 265
         Top = 40
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 14
-        OnClick = BitBtnNoDropClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -942,6 +912,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 14
+        OnClick = BitBtnNoDropClick
       end
       object BitBtnOpenDrop: TBitBtn
         Left = 235
@@ -949,8 +922,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 15
-        OnClick = BitBtnOpenDropClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -978,15 +949,14 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 15
+        OnClick = BitBtnOpenDropClick
       end
       object BitBtnNoMove: TBitBtn
         Left = 265
         Top = 69
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 16
-        OnClick = BitBtnNoMoveClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1014,6 +984,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 16
+        OnClick = BitBtnNoMoveClick
       end
       object BitBtnOpenMove: TBitBtn
         Left = 235
@@ -1021,8 +994,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 17
-        OnClick = BitBtnOpenMoveClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -1050,15 +1021,14 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 17
+        OnClick = BitBtnOpenMoveClick
       end
       object BitBtnNoTurn: TBitBtn
         Left = 265
         Top = 98
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 18
-        OnClick = BitBtnNoTurnClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1086,6 +1056,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 18
+        OnClick = BitBtnNoTurnClick
       end
       object BitBtnOpenTurn: TBitBtn
         Left = 235
@@ -1093,8 +1066,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 19
-        OnClick = BitBtnOpenTurnClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -1122,15 +1093,14 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 19
+        OnClick = BitBtnOpenTurnClick
       end
       object BitBtnNoOver: TBitBtn
         Left = 265
         Top = 127
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 20
-        OnClick = BitBtnNoOverClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1158,6 +1128,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 20
+        OnClick = BitBtnNoOverClick
       end
       object BitBtnOpenOver: TBitBtn
         Left = 235
@@ -1165,8 +1138,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 21
-        OnClick = BitBtnOpenOverClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -1194,15 +1165,14 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 21
+        OnClick = BitBtnOpenOverClick
       end
       object BitBtnNoLoop: TBitBtn
         Left = 265
         Top = 156
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 22
-        OnClick = BitBtnNoLoopClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1230,6 +1200,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 22
+        OnClick = BitBtnNoLoopClick
       end
       object BitBtnOpenLoop: TBitBtn
         Left = 235
@@ -1237,8 +1210,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 23
-        OnClick = BitBtnOpenLoopClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -1266,6 +1237,8 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 23
+        OnClick = BitBtnOpenLoopClick
       end
       object MediaPlayer: TMediaPlayer
         Left = 36
@@ -1290,8 +1263,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 26
-        OnClick = BitBtnPlayErrorClick
         Glyph.Data = {
           26040000424D2604000000000000360000002800000012000000120000000100
           180000000000F003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1327,15 +1298,14 @@ object FrmOptions: TFrmOptions
           00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFF0000}
+        TabOrder = 26
+        OnClick = BitBtnPlayErrorClick
       end
       object BitBtnNoError: TBitBtn
         Left = 265
         Top = 185
         Width = 24
         Height = 23
-        ModalResult = 3
-        TabOrder = 27
-        OnClick = BitBtnNoErrorClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
@@ -1363,6 +1333,9 @@ object FrmOptions: TFrmOptions
           00002000007F0000FF0000FF0000FF0000FF0000FF0000FF0000FF00007F0000
           20FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00004000007F0000BF00
           00BF0000BF00007F000040FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ModalResult = 3
+        TabOrder = 27
+        OnClick = BitBtnNoErrorClick
       end
       object BitBtnOpenError: TBitBtn
         Left = 235
@@ -1370,8 +1343,6 @@ object FrmOptions: TFrmOptions
         Width = 24
         Height = 23
         Cancel = True
-        TabOrder = 28
-        OnClick = BitBtnOpenErrorClick
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
           1800000000000003000000000000000000000000000000000000FFFFFF000000
@@ -1399,6 +1370,8 @@ object FrmOptions: TFrmOptions
           CFCFCF50505060DFDF60DFDF60DFDF60DFDF707070FFFFFFFFFFFFFFFFFFFFFF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF202020BFBFBFBFBFBFBFBFBFBFBFBF7F
           7F7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        TabOrder = 28
+        OnClick = BitBtnOpenErrorClick
       end
       object CkbNoSounds: TCheckBox
         Left = 16
@@ -1458,8 +1431,8 @@ object FrmOptions: TFrmOptions
       object Label12: TLabel
         Left = 3
         Top = 3
-        Width = 296
-        Height = 45
+        Width = 289
+        Height = 48
         Caption = 
           'Dieses Spiel wurde von der Delphi-AG von verschiedenen Projekten' +
           ' ausgew'#228'hlt und die Grundstrukturen wurden zusammen entwickelt.'
