@@ -18,6 +18,9 @@ object FrmSplashScreen: TFrmSplashScreen
   OnDblClick = FormDblClick
   OnHide = FormHide
   OnPaint = FormPaint
+  DesignSize = (
+    565
+    280)
   PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
@@ -102,10 +105,12 @@ object FrmSplashScreen: TFrmSplashScreen
     OnDblClick = FormDblClick
   end
   object LblVersion: TLabel
-    Left = 474
-    Top = 216
-    Width = 20
+    Left = 432
+    Top = 206
+    Width = 62
     Height = 13
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
     Caption = '0.9b'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clNavy
