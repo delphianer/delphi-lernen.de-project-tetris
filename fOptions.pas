@@ -913,8 +913,8 @@ begin
     Msg:='Es sind keine Templates vorhanden!' +#13+
          'Lassen Sie das Programm nach Updates suchen!' +#13+#13+
          'Jetzt nach Updates suchen?';
-    if Application.MessageBox(PChar(Msg),'Fehler!',MB_YESNO+MB_ICONERROR)=ID_YES then
-      BtnStartUpdate.Click;
+    //if Application.MessageBox(PChar(Msg),'Fehler!',MB_YESNO+MB_ICONERROR)=ID_YES then
+    //  BtnStartUpdate.Click;  // wurde in vorherigem "Fix" entfernt. Sorry!
   end;  
 end;
 
